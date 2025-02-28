@@ -1,0 +1,12 @@
+<app-abstract-list
+  title="CRM Companies"
+  placeholder="Filter companies..."
+  addButtonLabel="Add company"
+  addButtonLink="/add-company"
+  [availableColumns]="tableColumns"
+  [data]="allCompanies"
+  [currentPage]="currentPage"
+  (deleteItem)="onDeleteCompany($event)"
+  (pageChange)="onPageChange($event)"
+  (searchChange)="onSearchChange($event)">
+</app-abstract-list>

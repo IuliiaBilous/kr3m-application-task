@@ -1,0 +1,82 @@
+<div class="add-contact-form">
+  <div class="d-flex justify-content-center">
+    <h2 class="display-6 p-3 d-lg-block d-none">Add New Contact</h2>
+  </div>
+  <div class="w-50 mx-auto mt-4">
+    <form #contactForm="ngForm" (ngSubmit)="addContact(contactForm)" [class.was-validated]="formSubmitted" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="user">User Name</label>
+        <input
+          type="text"
+          id="user"
+          class="form-control"
+          [(ngModel)]="newContact.user"
+          name="user"
+          #user="ngModel"
+          required
+        />
+        <div *ngIf="user.invalid && formSubmitted" class="invalid-feedback">
+          User Name is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          [(ngModel)]="newContact.email"
+          name="email"
+          #email="ngModel"
+          required
+          email
+        />
+        <div *ngIf="email.invalid && formSubmitted" class="invalid-feedback">
+          Please enter a valid email.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="company">Company</label>
+        <input
+          type="text"
+          id="company"
+          class="form-control"
+          [(ngModel)]="newContact.company"
+          name="company"
+          #company="ngModel"
+          required
+        />
+        <div *ngIf="company.invalid && formSubmitted" class="invalid-feedback">
+          Company is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="code">Code</label>
+        <input
+          type="text"
+          id="code"
+          class="form-control"
+          [(ngModel)]="newContact.code"
+          name="code"
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="note">Note</label>
+        <textarea
+          id="note"
+          class="form-control"
+          [(ngModel)]="newContact.note"
+          name="note"
+        ></textarea>
+      </div>
+
+      <div class="d-flex justify-content-center mb-3">
+        <button type="submit" class="btn btn-add-contact">Add Contact</button>
+      </div>
+    </form>
+  </div>
+</div>

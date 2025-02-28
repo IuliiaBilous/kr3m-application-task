@@ -1,0 +1,87 @@
+<div class="add-company-form">
+  <div class="page-header d-flex justify-content-center">
+    <h2 class="display-6 p-3 d-lg-block d-none">Add New Company</h2>
+  </div>
+  <div class="w-50 mx-auto mt-4">
+    <form #companyForm="ngForm" (ngSubmit)="addCompany(companyForm)" [class.was-validated]="formSubmitted" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="summary">Summary</label>
+        <input
+          type="text"
+          id="summary"
+          class="form-control"
+          [(ngModel)]="newCompany.summary"
+          name="summary"
+          #summary="ngModel"
+          required
+        />
+        <div *ngIf="summary.invalid && formSubmitted" class="invalid-feedback">
+          Summary is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          [(ngModel)]="newCompany.email"
+          name="email"
+          #email="ngModel"
+          required
+          email
+        />
+        <div *ngIf="email.invalid && formSubmitted" class="invalid-feedback">
+          Please enter a valid email.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="phone">Phone</label>
+        <input
+          type="text"
+          id="phone"
+          class="form-control"
+          [(ngModel)]="newCompany.phone"
+          name="phone"
+          #phone="ngModel"
+          required
+        />
+        <div *ngIf="phone.invalid && formSubmitted" class="invalid-feedback">
+          Phone is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="location">Location</label>
+        <input
+          type="text"
+          id="location"
+          class="form-control"
+          [(ngModel)]="newCompany.location"
+          name="location"
+          #location="ngModel"
+          required
+        />
+        <div *ngIf="location.invalid && formSubmitted" class="invalid-feedback">
+          Location is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="note">Note</label>
+        <textarea
+          id="note"
+          class="form-control"
+          [(ngModel)]="newCompany.note"
+          name="note"
+        ></textarea>
+      </div>
+
+      <div class="d-flex justify-content-center mb-3">
+        <button type="submit" class="btn btn-add-company">Add Company</button>
+      </div>
+    </form>
+  </div>
+</div>

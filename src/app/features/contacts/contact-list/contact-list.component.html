@@ -1,0 +1,12 @@
+<app-abstract-list
+  title="CRM Contacts"
+  placeholder="Filter contacts..."
+  addButtonLabel="Add contact"
+  addButtonLink="/add-contact"
+  [availableColumns]="tableColumns"
+  [data]="allContacts"
+  [currentPage]="currentPage"
+  (deleteItem)="onDeleteContact($event)"
+  (pageChange)="onPageChange($event)"
+  (searchChange)="onSearchChange($event)">
+</app-abstract-list>
