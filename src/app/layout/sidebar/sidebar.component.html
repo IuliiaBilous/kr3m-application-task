@@ -1,0 +1,15 @@
+<aside class="sidebar overflow-auto">
+  <nav class="nav">
+    <ul *ngFor="let section of sidebarSections" class="nav flex-column mb-auto list-unstyled ms-2">
+      <li class="nav-item" *ngIf="section.title">
+        <h6 class="sidebar-section-title ms-3 mt-4 d-lg-block d-none">{{ section.title }}</h6>
+      </li>
+      <li class="nav-item" *ngFor="let item of section.items">
+        <a [routerLink]="item.link" class="nav-link align-items-center d-flex py-3 text-white">
+          <i [class]="item.icon + ' custom-sidebar-icon'"></i>
+          <h5 class="d-none d-lg-block mt-2 ms-4">{{ item.label }}</h5>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>

@@ -1,0 +1,43 @@
+.header {
+  background: var(--color-primary-dark);
+  height: 4rem;
+}
+
+.btn {
+  border: none;
+  color: #ffffff;
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
+}
+
+.header-search {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: 0;
+
+  @media (min-width: 993px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 992px) {
+    width: 16rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 12rem;
+  }
+}
+
+.header-search::placeholder {
+  color: #ffffff;
+}
+
+.header-icon {
+  font-size: 1.5rem;
+}
+
+.header-main-icon {
+  font-size: 2rem;
+}
