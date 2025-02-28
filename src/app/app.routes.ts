@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 import {ContactListComponent} from "./features/contacts/contact-list/contact-list.component";
 import {CompanyListComponent} from "./features/companies/company-list/company-list.component";
 import {AddContactComponent} from "./features/contacts/add-contact/add-contact.component";

@@ -1,5 +1,5 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {TestBed} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 import {provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 import {provideRouter} from "@angular/router";
 import {routes} from "./app.routes";
